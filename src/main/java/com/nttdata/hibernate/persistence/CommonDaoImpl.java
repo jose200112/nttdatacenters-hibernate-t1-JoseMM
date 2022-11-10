@@ -10,7 +10,7 @@ import org.hibernate.Session;
  * 
  * @author jose
  *
- * @param <T>
+ * @param <T> (Customer)
  */
 public abstract class CommonDaoImpl<T extends Customer> implements CommonDaoI<T> {
 
@@ -40,7 +40,7 @@ public abstract class CommonDaoImpl<T extends Customer> implements CommonDaoI<T>
 			session.getTransaction().begin();
 		}
 
-		// Insercción.
+		// Inserccion.
 		session.save(paramT);
 		session.flush();
 
@@ -66,7 +66,7 @@ public abstract class CommonDaoImpl<T extends Customer> implements CommonDaoI<T>
 	@Override
 	public void delete(final T paramT) {
 
-		// Verificación de sesión abierta.
+		// Verificacion de sesion abierta.
 		if (!session.getTransaction().isActive()) {
 			session.getTransaction().begin();
 		}

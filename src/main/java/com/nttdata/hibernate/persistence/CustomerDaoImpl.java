@@ -17,7 +17,7 @@ public class CustomerDaoImpl extends CommonDaoImpl<Customer> implements Customer
 	/**
 	 * Metodo constructor
 	 * 
-	 * @param session
+	 * @param session (sesion)
 	 */
 	public CustomerDaoImpl(Session session) {
 		super(session);

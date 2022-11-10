@@ -34,7 +34,7 @@ public class NTTDataMain {
 	 */
 	public static void main(String[] args) {
 
-		// Apertura de sesión.
+		// Apertura de sesion.
 		final Session session = NTTDataHibernateUtil.getSessionFactory().openSession();
 
 		final CustomerManagementServiceI customerService = new CustomerManagementServiceImpl(session);

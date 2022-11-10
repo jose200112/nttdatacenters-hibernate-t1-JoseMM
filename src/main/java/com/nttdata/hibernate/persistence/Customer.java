@@ -38,7 +38,8 @@ public class Customer implements Serializable {
 	private String dni;
 
 	/**
-	 * @return the matchId
+	 * Devuelve el id del cliente
+	 * @return customerId (id)
 	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -48,14 +49,16 @@ public class Customer implements Serializable {
 	}
 
 	/**
-	 * @param matchId the matchId to set
+	 * Coloca el id del cliente
+	 * @param customerId (id)
 	 */
 	public void setCustomerId(Long customerId) {
 		this.customerId = customerId;
 	}
 
 	/**
-	 * @return the name
+	 * Devuelve el nombre
+	 * @return name
 	 */
 	@Column(name = "NAME")
 	public String getName() {
@@ -63,14 +66,16 @@ public class Customer implements Serializable {
 	}
 
 	/**
-	 * @param name the name to set
+	 * Coloca el nombre
+	 * @param name nombre
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
 	/**
-	 * @return the name
+	 * Devuelve el primer apellido
+	 * @return firstSurname
 	 */
 	@Column(name = "FIRST_SURNAME", nullable = true)
 	public String getFirstSurname() {
@@ -78,7 +83,8 @@ public class Customer implements Serializable {
 	}
 
 	/**
-	 * @param name the name to set
+	 * Coloca el primer apellido
+	 * @param firstSurname (primerApellido)
 	 */
 	public void setFirstSurname(String firstSurname) {
 		this.firstSurname = firstSurname;
@@ -87,7 +93,7 @@ public class Customer implements Serializable {
 	/**
 	 * Devuelve el segundo apellido
 	 * 
-	 * @return secondSurname
+	 * @return secondSurname (segundoApellido)
 	 */
 	@Column(name = "SECOND_SURNAME", nullable = true)
 	public String getSecondSurname() {
@@ -97,7 +103,7 @@ public class Customer implements Serializable {
 	/**
 	 * Coloca el segundo apellido
 	 * 
-	 * @param secondSurname
+	 * @param secondSurname (segundoApellido)
 	 */
 	public void setSecondSurname(String secondSurname) {
 		this.secondSurname = secondSurname;
@@ -106,7 +112,7 @@ public class Customer implements Serializable {
 	/**
 	 * Coloca el dni
 	 * 
-	 * @param dni
+	 * @param dni (dni)
 	 */
 	public void setDNI(String dni) {
 		this.dni = dni;

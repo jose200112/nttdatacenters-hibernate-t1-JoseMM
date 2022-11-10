@@ -21,7 +21,7 @@ public class CustomerManagementServiceImpl implements CustomerManagementServiceI
 	/**
 	 * Metodo constructor
 	 * 
-	 * @param session
+	 * @param session sesion
 	 */
 	public CustomerManagementServiceImpl(final Session session) {
 		this.customerDao = new CustomerDaoImpl(session);
@@ -41,7 +41,7 @@ public class CustomerManagementServiceImpl implements CustomerManagementServiceI
 		// Verificación de nulidad y existencia.
 		if (updatedCustomer != null && updatedCustomer.getCustomerId() != null) {
 
-			// Actualización del jugador.
+			// Actualización del cliente.
 			customerDao.update(updatedCustomer);
 		}
 	}
@@ -51,7 +51,7 @@ public class CustomerManagementServiceImpl implements CustomerManagementServiceI
 		// Verificación de nulidad y existencia.
 		if (deletedCustomer != null && deletedCustomer.getCustomerId() != null) {
 
-			// Eliminación del jugador.
+			// Eliminación del cliente.
 			customerDao.delete(deletedCustomer);
 		}
 
@@ -59,13 +59,12 @@ public class CustomerManagementServiceImpl implements CustomerManagementServiceI
 
 	@Override
 	public Customer searchById(Long customerId) {
-		// Resultado.
 		Customer customer = null;
 
 		// Verificación de nulidad.
 		if (customerId != null) {
 
-			// Obtención del partido por ID.
+			// Obtención del cliente por ID.
 			customer = customerDao.searchById(customerId);
 		}
 
@@ -74,16 +73,14 @@ public class CustomerManagementServiceImpl implements CustomerManagementServiceI
 
 	@Override
 	public List<Customer> searchAll() {
-
-		// Resultado.
 		List<Customer> customerList;
 
-		// Obtención de equipos.
+		// Obtención de clientes.
 		customerList = customerDao.searchAll();
 
 		return customerList;
 	}
-
+	
 	@Override
 	public List<Customer> searchByNameAndSurnames(String name, String firstSurname, String secondSurname) {
 		List<Customer> customers = new ArrayList<>();

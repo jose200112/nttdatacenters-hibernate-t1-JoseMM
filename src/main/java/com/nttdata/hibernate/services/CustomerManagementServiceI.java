@@ -15,28 +15,28 @@ public interface CustomerManagementServiceI {
 	/**
 	 * Inserta un nuevo cliente
 	 * 
-	 * @param newCustomer
+	 * @param newCustomer (nuevoCliente)
 	 */
 	public void insertNewCustomer(final Customer newCustomer);
 
 	/**
 	 * Actualiza un cliente
 	 * 
-	 * @param updatedCustomer
+	 * @param updatedCustomer (actualizaCliente)
 	 */
 	public void updateCustomer(final Customer updatedCustomer);
 
 	/**
 	 * Borra un cliente
 	 * 
-	 * @param deletedCustomer
+	 * @param deletedCustomer (borraCliente)
 	 */
 	public void deleteCustomer(final Customer deletedCustomer);
 
 	/**
 	 * Busca los clientes por id
 	 * 
-	 * @param customerId
+	 * @param customerId id
 	 * @return Customer
 	 */
 	public Customer searchById(final Long customerId);
@@ -44,17 +44,17 @@ public interface CustomerManagementServiceI {
 	/**
 	 * Busca todos los clientes
 	 * 
-	 * @return List<Customer>
+	 * @return List
 	 */
 	public List<Customer> searchAll();
 
 	/**
 	 * Busca los clientes por nombre y apellidos
 	 * 
-	 * @param name
-	 * @param firstSurname
-	 * @param secondSurname
-	 * @return List<Customer>
+	 * @param name nombre
+	 * @param firstSurname primerApellido
+	 * @param secondSurname segundoApellido
+	 * @return List clientes
 	 */
 	public List<Customer> searchByNameAndSurnames(String name, String firstSurname, String secondSurname);
 
